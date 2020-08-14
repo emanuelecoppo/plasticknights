@@ -1,0 +1,60 @@
+#logo {
+    width: 100%;
+    position: relative;
+    margin-bottom: 90px;
+}
+#logo1, #logo2 {
+    width: 100%;
+    /*transition: clip-path 0.7s ease-in-out;*/
+}
+#logo2 {
+    display: none;
+}
+/*
+#logo1 {
+    clip-path: inset(0 0 0 0);
+}
+#logo2 {
+    clip-path: inset(0 100% 0 0);
+    position: absolute;
+    top: 0;
+}
+#logo:hover #logo1 {
+    clip-path: inset(0 0 0 100%);
+    transition-delay: 0.5s;
+}
+#logo:hover #logo2 {
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0.5s;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<div id="forme">
+	<svg style="animation-duration:20s;animation-delay:2s;top:10vh;"><circle cx="21.5px" cy="21.5px" r="20px"/></svg>
+	<svg style="animation-duration:15s;animation-delay:0s;top:30vh;"><circle cx="11.5px" cy="11.5px" r="10px"/></svg>				<svg style="animation-duration:40s;animation-delay:8s;top:80vh;"><circle cx="31.5px" cy="31.5px" r="30px"/></svg>
+	<svg style="animation-duration:20s;animation-delay:4s;top:60vh;"><circle cx="51.5px" cy="51.5px" r="50px"/></svg>
+</div>
+
+/*--------------------FORME--------------------*/
+
+#forme circle {
+  stroke: #fff;
+  fill: none;
+  opacity: 0.1;
+  stroke-width:3;
+}
+#forme svg {
+  position: absolute;
+  animation: forme infinite linear;
+  left: -20vw;
+}
+@keyframes forme {
+  from {left: -20vw;}
+  to {left: 100vw;}
+}
+#forme {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+}

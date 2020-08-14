@@ -1,0 +1,198 @@
+/*--------------------BROWSER--------------------*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+::selection {
+    background: #c1272d;
+}
+
+/*--------------------LANGUAGE--------------------*/
+
+.eng {
+    display: none;
+}
+.language {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.language:hover {
+  color: black;
+  background-color: white;
+}
+
+/*--------------------FONT--------------------*/
+
+@font-face {
+    font-family: Montserrat-ExtraLight;
+    src: url(../font/Montserrat-ExtraLight.otf);
+}
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../font/Montserrat-Light.otf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat-Regular.otf);
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(../font/Montserrat-Medium.otf);
+}
+
+/*--------------------GENERAL--------------------*/
+
+* {
+    font-family: Montserrat-Light, Helvetica, Arial, "sans-serif";
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-weight: normal;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    padding-top: 7vw;
+    overflow-x: hidden;
+}
+h1 {
+    font-family: Montserrat-Regular, Helvetica, Arial, "sans-serif";
+}
+h2 {
+    font-family: Montserrat-Regular, Helvetica, Arial, "sans-serif";
+    font-size: calc(1.6em + 0.8vw);
+    margin-bottom: 0.5em;
+    position: relative;
+}
+p {
+    font-size: calc(0.87em + 0.17vw);
+    margin-bottom: 1em;
+}
+a {
+    color: inherit;
+}
+
+/*--------------------MAIN--------------------*/
+
+.main {
+    padding: 0 calc( -100px + 22vw);
+}
+.column {
+  columns: 2 300px;
+  column-gap: calc(-70px + 15vw);
+}
+.column > div {
+  break-inside: avoid;
+}
+@media only screen and (max-width: 805px) {
+    .main {
+        padding: 0 12vw;
+    }
+}
+
+/*--------------------HEADER--------------------*/
+
+#rett1, #rett2 {
+    text-align: center;
+    transition-property: transform, box-shadow;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+    width: 80%;
+}
+#rett1 {
+    font-size: calc(20px + 4vw);
+    background-color:#c1272d;
+    padding: 20px 20px;
+    box-shadow: 2vw -2vw 0 hsl(358,66%,20%);
+}
+#rett2 {
+    background-color: hsl(358,66%,30%);
+    padding: 20px 20px;
+    float: right;
+}
+#rett1:hover {
+  transform: translateX(-4%);
+  box-shadow: -2vw -2vw 0 hsl(358,66%,20%);
+}
+#rett2:hover {
+  transform: translateX(4%);
+}
+
+/*--------------------SCHERMI--------------------*/
+
+#schermi {
+  margin: 12vw auto;
+  width: 75vw;
+}
+#schermi img {
+  transition: filter 0.2s 0.1s;
+}
+#schermi img:hover {
+  filter: brightness(120%) contrast(80%);
+}
+.button {
+  font-family: Montserrat-Regular, Helvetica, Arial, "sans-serif";
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  background-color: #c1272d;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 8px;
+  width: 20%;
+  min-width: 180px;
+  margin: 0 auto;
+  transition: background-color 0.4s, transform 0.4s;
+}
+.button:hover {
+  background-color: hsl(358,66%,60%);
+  transform: scale(0.95, 0.95);
+}
+
+/*--------------------TESTO--------------------*/
+
+.section-sx {
+  text-align: right;
+}
+.section-sx, .section-dx {
+  margin-bottom: calc(30px + 4vw);
+}
+h2::before {
+  content: "";
+  background-color: #c1272d;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  transition: transform 0.8s 0.2s ease-in-out;
+}
+.left::before {
+  transform-origin: right;
+  transform: scaleX(2);
+}
+.right::before {
+  transform-origin: left;
+  transform: scaleX(2);
+}
+h2:hover::before {
+  transform: scaleX(0);
+}
+
+/*--------------------SOCIAL--------------------*/
+
+.social {
+    text-align: center;
+}
+.social i {
+    font-size: calc(1.8em + 2vw);
+    margin: 2%;
+    transition: color 0.4s ease-out, transform 0.4s ease-out;
+}
+.social i:hover {
+    color: #c1272d;
+    transform: scale(1.15, 1.15);
+}

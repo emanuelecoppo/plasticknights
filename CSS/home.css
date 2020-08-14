@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*--------------------TOUR--------------------*/
+
+#tour {
+    background-color: #fff;
+    color: #444;
+}
+.show {
+	padding: 25px 0;
+	border-bottom: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+}
+.show * {
+    display: inline-block;
+}
+.show p {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.place1, .place2, .info-position {
+    margin-left: 1em;
+}
+.date {
+    width: 15%;
+}
+.place1 {
+    width: 35%;
+}
+.place2 {
+    width: 45%;
+}
+.info {
+	color: #777;
+	padding: 0.6em 1em;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+    transition-property: background-color, color, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.info:hover {
+    background-color: hsla(358,66%,45%,.5);
+    color: #fff;
+    border-color: #fff;
+}
+@media only screen and (max-width:600px) {
+    .show {
+        padding: 20px 0;
+        border-bottom: none;
+        display: block;
+    }
+    .show * {
+        display: block; 
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .show p {
+        margin-bottom: 1em;
+    }
+    .info {
+        padding-left: 0;
+        padding-right: 0;
+        width: 70%;
+        margin: auto;
+    }
+}
+
+/*--------------------PARALLAX--------------------*/
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.mobile {
+    display: none;
+}
+@media (pointer:coarse) {
+    .parallax {
+        background-attachment: scroll;
+    }
+    .desktop {
+        display: none;
+    }   
+    .mobile {
+        display: block;
+    }
+}

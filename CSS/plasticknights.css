@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+/*--------------------BROWSER--------------------*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+::selection {
+    background: #c1272d;
+}
+
+/*--------------------LANGUAGE--------------------*/
+
+.eng {
+    display: none;
+}
+#language {
+    text-align: right;
+    padding: 15px;
+}
+
+/*--------------------LOADING--------------------*/
+
+#loading {
+    width: 100%;
+    height: 100%;
+    background-color: #c1272d;
+    z-index: 10;
+    position: fixed;
+}
+#loading div {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+#loading img {
+    margin: 0 8px 15px 8px;
+    width: 100px;
+    max-width: 80%;
+    animation: loading 0.7s infinite ease-in-out;
+}
+@keyframes loading {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
+
+/*--------------------FONT--------------------*/
+
+@font-face {
+    font-family: Montserrat-ExtraLight;
+    src: url(../font/Montserrat-ExtraLight.otf);
+}
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../font/Montserrat-Light.otf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat-Regular.otf);
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(../font/Montserrat-Medium.otf);
+}
+
+/*--------------------GENERAL--------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-weight: normal;
+}
+body {
+    font-family: Montserrat-Light, Helvetica, Arial, "sans-serif";
+    background-color: #000;
+    color: #fff;
+}
+/*body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../img/bg.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0.7;
+}*/
+img {
+    max-width: 100%;
+}
+h2 {
+    font-family: Montserrat-Regular, Helvetica, Arial, "sans-serif";
+    font-size: calc(1.6em + 0.8vw); /*2.24em on 1280p, 1.76em on 320p*/
+    text-transform: uppercase;
+    margin-bottom: calc(30px + 1.6vw); /*50.48px on 1280p, 35.12px on 320p*/
+    position: relative;
+}
+h3 {
+    font-family: Montserrat-Medium, Helvetica, Arial, "sans-serif";
+    font-size: calc(0.87em + 0.17vw); /*1.006em on 1280p, 0.904em on 320p*/
+    margin-bottom: 0.5em;
+}
+p {
+    font-size: calc(0.87em + 0.17vw);
+    margin-bottom: 1em;
+}
+b {
+    font-family: Montserrat-Medium, Helvetica, Arial, "sans-serif";
+}
+a {
+    color: inherit;
+}
+
+/*--------------------DIVS--------------------*/
+
+.main {
+    padding: calc(70px + 3.9vw) calc( -10px + 7.77vw); /*margin: 120px 7% on 1280p, margin: 82.48px 15px on 320p*/
+}
+.column {
+    columns: 2 280px;
+    column-gap: 4vw;
+}
+.column p {
+    text-align: left;
+}
+
+/*--------------------LINK ANIMATION--------------------*/
+
+.underline, .underline2 {
+    position: relative;
+}
+.underline::before, .underline2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+.underline2::before {
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+.underline2:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/*--------------------DIVIDER--------------------*/
+
+h2::before {
+  content: "";
+  background-color: #c1272d;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  transform-origin: left;
+  transition: transform 0.8s 0.2s ease-in-out;
+}
+h2:hover::before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+/*--------------------LOGO--------------------*/
+
+#logo {
+    width: 100%;
+    position: relative;
+    margin-bottom: 90px;
+}
+#logo1, #logo2 {
+    width: 100%;
+}
+
+/*--------------------ALBUM COVER--------------------*/
+
+#albumcover {
+    width: 100%;
+    background-color: #979080;
+    margin-bottom: 25px;
+    border: 1.5px solid #979080;
+    border-radius: 2px;
+    transition: filter 0.3s linear, transform 0.3s ease-out;
+}
+#albumcover:hover {
+    filter: contrast(95%) brightness(105%);
+    transform: scale(0.99, 0.99);
+}
+
+/*--------------------SOCIAL--------------------*/
+
+.social {
+    text-align: center;
+}
+.social i {
+    font-size: calc(1.6em + 2vw);
+    margin: 1.5%;
+    transition: color 0.4s ease-out, transform 0.4s ease-out;
+}
+.social i:hover {
+    color: #c1272d;
+    transform: scale(1.15, 1.15);
+}
+
+/*--------------------CONTACT--------------------*/
+
+#contact {
+    text-align: center;
+    margin-bottom: 70px;
+}
+#contact i {
+    text-align: center;
+    margin-right: 0.6em;
+}
+
+/*--------------------FOOTER--------------------*/
+
+#footer {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#footer p {
+    margin-bottom: 0;
+}
+#footer i {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+#footer .up {
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease-in;
+}
+#footer .up:hover {
+    position: relative;
+    top: -0.2em;
+}
+
+/*--------------------MOBILE--------------------*/
+
+@media only screen and (max-width:600px) {
+    .jssorb051 {
+        display: none; /*bullet navigator*/
+    }
+}
+
+/*--------------------VIDEO--------------------*/
+
+.video {
+    text-align: center;
+    position: relative;
+    margin: 0 calc(-10px + 7.77vw);
+    padding-bottom: calc(0.5625 * (100% - 2 * (-10px + 7.77vw))); /*calcolo 16:9 togliendo al 100% il margine L+R del div*/
+    /*height: 0;*/
+}
+/* .video2 {
+  display: inline-block;
+  width: 43.2%;
+  margin-top: 3vw;
+  padding-bottom: calc(0.5625 * (43.2% - 2 * (-10px + 7.77vw)));
+} */
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
